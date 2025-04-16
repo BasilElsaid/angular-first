@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+        <div class="text-center col-12 my-3">
+            <h1>Modifica Prodotto</h1>
+        </div>
+        <div class="col-12 mb-3">
+            <label for="input-codice">Codice</label>
+            <input type="text" class="form-control bg-gray" id="input-codice" disabled readonly [(ngModel)]="codi">
+        </div>
+    
+        <div class="col-12 mb-3">
+            <label for="input-nome">Nome</label>
+            <input type="text" class="form-control" id="input-nome" [(ngModel)]="nome">
+        </div>
+    
+        <div class="col-12 mb-3">
+            <label for="input-descrizione">Descrizione</label>
+            <textarea class="form-control" id="input-descrizione" [(ngModel)]="desc"></textarea>
+        </div>
+    
+        <div class="col-12 mb-3">
+            <label for="input-prezzo">Prezzo</label>
+            <input type="number" min="0" class="form-control" id="input-prezzo" [(ngModel)]="prez">
+        </div>
+    
+        <div class="col-12 mb-3">
+            <label for="input-quantita">Quantita</label>
+            <input type="number" min="1" class="form-control" id="input-quantita" [(ngModel)]="quan">
+        </div>
+    
+        <div class="col-12">
+            <button type="button" class="btn btn-primary" (click)="modifica()">Modifica</button>
+        </div>
+    </div>
+</div>

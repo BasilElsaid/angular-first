@@ -1,0 +1,91 @@
+<div class="container-fluid px-0">
+    <div class="row">
+
+        <!--SIDE BAR-->
+        <div class="col-12 col-md-3 bg-secondary-subtle d-flex flex-column p-3">
+            <h4 class="text-center">Sidebar</h4>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a class="nav-link text-black" href="#">Dashboard</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a class="nav-link text-black" href="#">Profile</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a class="nav-link text-black" href="#">Settings</a>
+              </li>
+            </ul>
+        </div>
+
+        <!--MAIN CONTENT-->
+        <div class="col-12 col-md-7 p-3 text-center">
+            <div id="scrollspyContent" class="overflow-auto" style="height: 100vh;" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" tabindex="0">
+                
+                <h1 id="list-item-1" class="display-5 fw-bold text-body-emphasis pt-5">
+                    Benvenuto nella nostra App!
+                </h1>
+
+                <p id="list-item-2" class="pt-5">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, velit! Nemo autem provident sunt veritatis ullam dignissimos dolores optio! Laudantium nobis architecto distinctio eos adipisci dicta quisquam. Doloremque, quos quaerat?
+                </p>
+    
+                <hr class="my-5" />
+    
+                <h2 id="list-item-3" class="mb-4">
+                    Dashboard Overview
+                </h2>
+    
+                <div class="row g-4">
+
+                  <!-- Card 1 -->
+                  <div class="col-md-6">
+                    <div class="card shadow-sm">
+                      <div class="card-body">
+                        <h5 class="card-title">Statistic 1</h5>
+                        <p class="card-text">This is some info or a widget you can update dynamically.</p>
+                      </div>
+                    </div>
+                </div>
+              
+                  <!-- Card 2 -->
+                  <div class="col-md-6">
+                    <div class="card shadow-sm">
+                      <div class="card-body">
+                        <h5 class="card-title">Statistic 2</h5>
+                        <p class="card-text">Another quick stat, message, or component.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              
+                <hr class="my-5" />
+              
+                <!-- Form or Other Content -->
+                <h4 id="list-item-4" class="mt-4">Update Your Info</h4>
+                <form>
+                  <div class="mb-3">
+                    <label for="inputName" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="Enter your name" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="inputEmail" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="name@example.com" />
+                  </div>
+                  <button type="submit" class="btn btn-primary">Save</button>
+                </form>
+    
+            </div>  
+        </div>
+
+        <!--SCROLLSPY-->
+        <div class="col-12 col-md-2 p-3">
+            <div id="list-example" class="list-group position-absolute top-50 end-0 translate-middle-y">
+                <a class="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
+                <a class="list-group-item list-group-item-action" href="#list-item-2">Item 2</a>
+                <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
+                <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
+            </div>
+        </div>
+    </div>
+</div>

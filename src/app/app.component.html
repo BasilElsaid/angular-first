@@ -1,0 +1,67 @@
+<div class="d-flex flex-column min-vh-100">
+
+  <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <!--Toggler-->
+            <a class="navbar-brand ms-3" href="#">
+              <i class="bi bi-house"></i>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!--Components-->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+              <div class="navbar-nav gap-2">
+
+                <!--LOGGED IN CASE-->
+                <ng-container *ngIf="loggedInState">
+                    <a class="nav-link" [routerLink]="['/prodotto/inserisci']">Inserisci</a>
+                    <a class="nav-link" [routerLink]="['/prodotto/lista']">Lista</a>
+                    <a class="btn btn-outline-danger" [routerLink]="['home']" (click)="logOut()">Log Out</a>
+                </ng-container>
+                <!--LOGGED OUT CASE-->
+                <ng-container *ngIf="!loggedInState">
+                    <a class="btn btn-outline-primary" [routerLink]="['/user/signup']">Sign Up</a>
+                    <a class="btn btn-outline-success" [routerLink]="['/user/signin']">Log In</a>
+                </ng-container>
+
+              </div>
+            </div>
+
+          </div>
+        </nav>
+  </header>
+
+  <main class="flex-grow-1">
+      <div class="container-fluid">
+          <router-outlet></router-outlet>
+      </div>
+  </main>
+
+  <footer>
+    <div class="container-fluid text-center py-3 bg-body-tertiary">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="home" class="text-decoration-none">Home</a></li>
+            <li><a href="about" class="text-decoration-none">About</a></li>
+            <li><a href="contact" class="text-decoration-none">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Contact</h5>
+          <p>Contact us at: example&#64;example.com</p>          
+          <p>Phone: +123 456 7890</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <small>&copy; 2025 Your Company.<br>All rights reserved.</small>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+</div>
