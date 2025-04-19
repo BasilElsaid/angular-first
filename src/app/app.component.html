@@ -16,13 +16,13 @@
               <div class="navbar-nav gap-2">
 
                 <!--LOGGED IN CASE-->
-                <ng-container *ngIf="loggedInState">
+                <ng-container *ngIf="isAuthenticated">
                     <a class="nav-link" [routerLink]="['/prodotto/inserisci']">Inserisci</a>
                     <a class="nav-link" [routerLink]="['/prodotto/lista']">Lista</a>
                     <a class="btn btn-outline-danger" [routerLink]="['home']" (click)="logOut()">Log Out</a>
                 </ng-container>
                 <!--LOGGED OUT CASE-->
-                <ng-container *ngIf="!loggedInState">
+                <ng-container *ngIf="!isAuthenticated">
                     <a class="btn btn-outline-primary" [routerLink]="['/user/signup']">Sign Up</a>
                     <a class="btn btn-outline-success" [routerLink]="['/user/signin']">Log In</a>
                 </ng-container>

@@ -14,4 +14,8 @@ export class User {
         return this._token
     }
 
+    tokenValid(): boolean {
+        return this._expirationDate > new Date();
+    }
+
 }

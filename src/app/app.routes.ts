@@ -39,22 +39,22 @@ export const routes: Routes = [
     {
         path: "user/dashboard", 
         component: DashboardComponent, 
-        canActivate: [authGuard]
+        //canActivate: [authGuard]
     },
     {
         path: "prodotto/inserisci", 
         component: ProdottoInserimentoComponent, 
-        canActivate: [authGuard]
+        //canActivate: [authGuard]
     },
     {
         path: "prodotto/lista", 
         component: ProdottoListaComponent, 
-        canActivate: [authGuard]
+        //canActivate: [authGuard]
     },
     {
         path: "prodotto/modifica/:codice", 
         component: ProdottoModificaComponent, 
-        canActivate: [authGuard]
+        //canActivate: [authGuard]
     }
     
 ];

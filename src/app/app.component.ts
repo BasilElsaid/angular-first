@@ -15,17 +15,14 @@ export class AppComponent {
   constructor(private authService: AuthService){}
 
   ngOnInit(): void {
-    if(localStorage.getItem('user')){
-      const user= JSON.parse(localStorage.getItem('user')!)
-      this.authService.createUser(user.email, user.id, user._token, user._expirationDate)
-    }
+    this.authService.autoLogin();
   }
 
   logOut(){
     this.authService.signOut()
   }
 
-  get loggedInState(){
-    return this.authService.isAuthenticated()
+  get isAuthenticated(){
+    return this.authService.isAuthenticated();
   }
 }

@@ -14,20 +14,31 @@ export class FirebaseService {
     private authService: AuthService
   ) { }
 
-  insertProdotto(body: {}) {
-    return this.http.post(`${this.urlFirebaseProdotti}.json`, body)
-  }
 
   getProdotti() {
-    return this.http.get(`${this.urlFirebaseProdotti}.json?auth=${this.authService.user?.token}`)
+    return this.http.get(
+      `${this.urlFirebaseProdotti}.json?auth=${this.authService.user?.token}`
+    );
   }
 
+  insertProdotto(body: {}) {
+    return this.http.post(
+      `${this.urlFirebaseProdotti}.json?auth=${this.authService.user?.token}`,
+      body
+    );
+  }
+  
   deleteProdotto(id: string) {
-    return this.http.delete(`${this.urlFirebaseProdotti}/${id}.json`)
+    return this.http.delete(
+      `${this.urlFirebaseProdotti}/${id}.json?auth=${this.authService.user?.token}`
+    );
   }
-
+  
   updateProdotto(id: string, body: {}) {
-    return this.http.patch(`${this.urlFirebaseProdotti}/${id}.json`, body)
+    return this.http.patch(
+      `${this.urlFirebaseProdotti}/${id}.json?auth=${this.authService.user?.token}`,
+      body
+    );
   }
 
 }
